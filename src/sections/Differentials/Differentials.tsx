@@ -4,7 +4,7 @@ import './Differentials.css'
 const principles = [
   {
     lead: 'Entender',
-    rest: 'antes de construir.',
+    rest: 'antes de escolher a tecnologia.',
     side: 'left',
   },
   {
@@ -18,7 +18,7 @@ const principles = [
     side: 'left',
   },
   {
-    lead: 'Construir',
+    lead: 'Aplicar',
     rest: 'só o que faz sentido.',
     side: 'right',
   },
@@ -27,10 +27,10 @@ const principles = [
 const differentials = [
   {
     title: 'Contato direto',
-    text: 'Você conversa com quem está entendendo e desenvolvendo o projeto.',
+    text: 'Você conversa com quem entende a operação e conduz a solução.',
   },
   {
-    title: 'Solução sob medida',
+    title: 'Tecnologia adequada',
     text: 'A tecnologia se adapta à necessidade — e não o contrário.',
   },
   {
@@ -145,13 +145,13 @@ function Differentials() {
           </span>
 
           <h2 className="differentials__title">
-            Software é parte do projeto. Clareza também.
+            Tecnologia com propósito. Clareza em cada etapa.
           </h2>
 
           <p className="differentials__intro">
-            Um bom projeto não depende só do que é desenvolvido. Depende também
-            de entender bem o problema, explicar decisões e manter expectativas
-            claras do início ao fim.
+            Um bom projeto começa por entender a operação. As decisões sobre
+            tecnologia, implantação e uso precisam fazer sentido para o problema,
+            com prioridades e expectativas claras em cada etapa.
           </p>
         </header>
 

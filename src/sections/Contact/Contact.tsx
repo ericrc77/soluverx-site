@@ -11,7 +11,7 @@ type FieldErrors = {
 }
 
 const whatsappUrl =
-  'https://wa.me/5533998551827?text=Olá,%20vim%20pelo%20site%20da%20Soluverx%20e%20gostaria%20de%20falar%20sobre%20um%20projeto.'
+  'https://wa.me/5533998551827?text=Olá,%20vim%20pelo%20site%20da%20Soluverx%20e%20gostaria%20de%20conversar%20sobre%20uma%20necessidade%20da%20minha%20operação.'
 
 function trackFormSuccess() {
   if (typeof window === 'undefined') {
@@ -146,7 +146,8 @@ function Contact() {
 
           <p className="contact__lead">
             Você não precisa chegar com a solução pronta. Explique o problema,
-            a tarefa ou o processo que quer melhorar e começamos por aí.
+            como sua operação funciona hoje e o que quer melhorar. A conversa
+            começa por essa necessidade.
           </p>
 
           <div className="contact__channels">

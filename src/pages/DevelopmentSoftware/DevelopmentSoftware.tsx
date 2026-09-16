@@ -204,8 +204,8 @@ const processSteps = [
   {
     number: '05',
     phase: 'Evolução',
-    title: 'Entregar e evoluir',
-    text: 'Colocar a solução em uso e avaliar os próximos passos conforme novas necessidades aparecem.',
+    title: 'Colocar em uso e avaliar próximos passos',
+    text: 'Orientar o uso da solução e avaliar novas necessidades. Suporte, manutenção e evolução fazem parte da continuidade quando contratados.',
   },
 ]
 

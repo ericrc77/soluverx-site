@@ -208,20 +208,20 @@ function Hero() {
     <section className="hero" id="inicio">
       <div className="hero__container">
         <div className="hero__content">
-          <span className="hero__eyebrow">Software sob medida</span>
+          <span className="hero__eyebrow">Tecnologia a partir do problema</span>
 
           <h1 className="hero__title">
             Tem algo no seu negócio dando mais trabalho do que deveria?
           </h1>
 
           <p className="hero__lead">
-            A Soluverx desenvolve software sob medida para empresas.
+            Entendemos sua operação para aplicar a tecnologia que faz sentido.
           </p>
 
           <p className="hero__text">
-            Você não precisa chegar sabendo qual sistema precisa. Conte o que
-            está dando trabalho e ajudamos a entender se sistemas personalizados
-            ou outra solução digital fazem sentido para o seu negócio.
+            Você não precisa chegar com uma solução pronta. Conte o que está
+            dando trabalho: analisamos o contexto e definimos um primeiro passo
+            para melhorar a operação com tecnologia adequada.
           </p>
 
           <div className="hero__actions">

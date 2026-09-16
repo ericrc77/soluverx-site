@@ -15,9 +15,9 @@ import FAQ from '../../sections/FAQ/FAQ'
 import Contact from '../../sections/Contact/Contact'
 
 const homeUrl = 'https://www.soluverx.com.br/'
-const homeTitle = 'Soluverx | Software sob medida para necessidades reais'
+const homeTitle = 'Soluverx | Tecnologia para negócios e software sob medida'
 const homeDescription =
-  'Empresa de software especializada em desenvolvimento de software sob medida, dashboards empresariais, automação de processos e integração de sistemas.'
+  'Soluverx: tecnologia a partir dos problemas da sua operação, com software sob medida, dashboards, automação de processos e integração de sistemas.'
 
 function Home() {
   useEffect(() => {
@@ -31,13 +31,21 @@ function Home() {
     setMetaContent('meta[property="og:url"]', homeUrl)
     setMetaContent('meta[property="og:title"]', homeTitle)
     setMetaContent(
+      'meta[property="og:image:alt"]',
+      'Soluverx - Software sob medida para necessidades reais',
+    )
+    setMetaContent(
       'meta[property="og:description"]',
-      'Software sob medida, dashboards empresariais, automação de processos e integração de sistemas a partir da necessidade real de cada empresa.',
+      homeDescription,
     )
     setMetaContent('meta[name="twitter:title"]', homeTitle)
     setMetaContent(
+      'meta[name="twitter:image:alt"]',
+      'Soluverx - Software sob medida para necessidades reais',
+    )
+    setMetaContent(
       'meta[name="twitter:description"]',
-      'Software sob medida, dashboards empresariais, automação de processos e integração de sistemas para empresas.',
+      homeDescription,
     )
 
     const canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]')

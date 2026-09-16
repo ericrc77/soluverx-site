@@ -4,8 +4,8 @@ import './About.css'
 const pillars = [
   {
     number: '01',
-    title: 'Sob medida',
-    text: 'Cada projeto parte da realidade da operação, não de uma solução pronta.',
+    title: 'Adequação à operação',
+    text: 'Cada projeto parte da realidade da operação para avaliar o que já funciona e o que precisa mudar.',
   },
   {
     number: '02',
@@ -14,8 +14,8 @@ const pillars = [
   },
   {
     number: '03',
-    title: 'Desenvolvimento próximo',
-    text: 'O contato acontece de forma direta, do entendimento inicial até a entrega.',
+    title: 'Condução próxima',
+    text: 'O contato é direto no projeto e na continuidade tecnológica, quando contratada.',
   },
 ]
 
@@ -52,11 +52,11 @@ function About() {
       <div className="about__container">
         <div className="about__mobile-trust">
           <span className="about__eyebrow">Quem conduz o projeto</span>
-          <h2>Você fala diretamente com quem entende e desenvolve a solução.</h2>
+          <h2>Você fala diretamente com quem entende a operação e conduz a solução.</h2>
           <p>
-            Na Soluverx, o contato é direto do entendimento inicial à entrega.
-            Isso reduz ruído, facilita decisões e mantém o projeto próximo da
-            necessidade real do negócio.
+            O contato é direto para entender o problema, escolher a tecnologia
+            e colocar a solução em uso. A continuidade tecnológica também pode
+            fazer parte desse trabalho, quando contratada.
           </p>
         </div>
         <header className="about__header">
@@ -68,9 +68,9 @@ function About() {
 
           <div className="about__copy">
             <p>
-              A Soluverx é uma empresa de software que nasceu com uma proposta
-              simples: entender dificuldades reais de negócios e transformar
-              essas necessidades em soluções digitais claras, úteis e sob medida.
+              A Soluverx parte de uma proposta simples: entender dificuldades
+              reais de negócios e aplicar tecnologia para criar soluções
+              digitais claras, úteis e adequadas à operação.
             </p>
 
             <p>
@@ -121,7 +121,7 @@ function About() {
 
         <div className="about__mobile-values" aria-label="Como a Soluverx trabalha">
           <span>Contato direto</span>
-          <span>Desenvolvimento sob medida</span>
+          <span>Tecnologia adequada</span>
           <span>Clareza no processo</span>
         </div>
       </div>

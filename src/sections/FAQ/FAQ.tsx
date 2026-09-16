@@ -21,7 +21,7 @@ const faqItems: FAQItem[] = [
   {
     question: 'A Soluverx trabalha só com sistemas completos?',
     answer:
-      'Não. Dependendo da necessidade, a solução pode ser uma automação, dashboard, integração, ferramenta interna, MVP ou algo mais completo.',
+      'Não. Primeiro avaliamos o problema e as ferramentas existentes. A solução pode ser uma automação, dashboard, integração, ferramenta interna, MVP ou software sob medida, conforme a necessidade.',
   },
   {
     question: 'Vocês conseguem integrar com sistemas que eu já uso?',
@@ -36,7 +36,7 @@ const faqItems: FAQItem[] = [
   {
     question: 'Posso começar com uma versão menor?',
     answer:
-      'Sim. Quando fizer sentido, o projeto pode começar com uma primeira versão mais simples e evoluir depois.',
+      'Sim. Quando fizer sentido, começamos por um escopo menor, implantamos por etapas e validamos no uso real. Novas evoluções dependem das prioridades e do escopo contratado.',
   },
   {
     question: 'Quanto tempo leva um projeto?',
@@ -47,6 +47,11 @@ const faqItems: FAQItem[] = [
     question: 'Como é o contato durante o projeto?',
     answer:
       'O contato é direto e o andamento é acompanhado com clareza sobre decisões, mudanças e próximos passos.',
+  },
+  {
+    question: 'E depois que a solução entra em uso?',
+    answer:
+      'Quando a continuidade tecnológica faz parte da contratação, a Soluverx acompanha a solução em uso e assume o suporte, a manutenção ou a evolução acordados. O escopo e as condições dessa continuidade precisam ser definidos na contratação.',
   },
 ]
 

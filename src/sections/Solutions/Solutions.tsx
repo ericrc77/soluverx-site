@@ -194,9 +194,9 @@ function Solutions() {
           </div>
 
           <p className="solutions__intro">
-            Nem todo projeto de desenvolvimento de software precisa da mesma
-            abordagem. Dependendo da necessidade, a solução pode ser pequena e
-            pontual ou evoluir para algo mais completo.
+            Avaliamos o que já funciona e o que precisa mudar. Software sob medida,
+            sistemas web, dashboards, automações, integrações, ferramentas internas,
+            MVPs e IA são caminhos possíveis, conforme o problema e a viabilidade.
           </p>
         </div>
 

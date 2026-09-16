@@ -4,33 +4,33 @@ import './Process.css'
 const steps = [
   {
     number: '01',
-    title: 'Você conta o problema',
-    text: 'Você explica o que está dando trabalho hoje. Não precisa saber o nome da solução, a tecnologia ou chegar com um escopo pronto.',
+    title: 'Entendemos problema e operação',
+    text: 'Você conta o que está dando trabalho e como a operação funciona hoje. Não precisa chegar com uma tecnologia escolhida ou um escopo pronto.',
   },
   {
     number: '02',
-    title: 'Entendemos o contexto',
-    text: 'Conversamos sobre como o processo funciona hoje, onde estão as dificuldades e o que você gostaria de melhorar.',
+    title: 'Analisamos as dificuldades',
+    text: 'O diagnóstico busca identificar o que gera retrabalho, atraso ou falta de clareza, considerando os processos e as ferramentas que você já usa.',
   },
   {
     number: '03',
-    title: 'Avaliamos o que faz sentido',
-    text: 'Antes de propor qualquer desenvolvimento, analisamos se a tecnologia realmente pode ajudar e qual tipo de solução faz mais sentido.',
+    title: 'Definimos solução e primeiro escopo',
+    text: 'Avaliamos o caminho adequado e organizamos uma proposta com prioridades, limites e um primeiro escopo. Nem todo problema exige software novo.',
   },
   {
     number: '04',
-    title: 'Organizamos a proposta',
-    text: 'Se houver um caminho viável, definimos o que será feito, prioridades, limites e próximos passos.',
+    title: 'Implantamos e validamos por etapas',
+    text: 'A solução é construída ou configurada e implantada progressivamente, com validações para manter o trabalho próximo da realidade da operação.',
   },
   {
     number: '05',
-    title: 'Desenvolvemos e validamos',
-    text: 'A solução é construída por etapas, com validações ao longo do caminho para evitar desenvolver algo distante da necessidade real.',
+    title: 'Colocamos valor em uso',
+    text: 'Orientamos o uso da solução e verificamos, na prática, como ela ajuda a melhorar o processo que motivou o projeto.',
   },
   {
     number: '06',
-    title: 'Entregamos e orientamos',
-    text: 'Na entrega, você entende o que foi desenvolvido e quais caminhos existem caso faça sentido continuar evoluindo.',
+    title: 'Continuidade quando contratada',
+    text: 'Quando a continuidade é contratada, a Soluverx acompanha a tecnologia em uso e assume o suporte, a manutenção ou a evolução previstos no escopo e nas condições acordadas.',
   },
 ]
 
@@ -38,18 +38,18 @@ const steps = [
 const mobileSteps = [
   {
     number: '01',
-    title: 'Você conta o problema',
-    text: 'Não precisa chegar sabendo qual tecnologia precisa.',
+    title: 'Entendemos e analisamos',
+    text: 'Você conta o problema e como a operação funciona. Analisamos as dificuldades antes de escolher a tecnologia.',
   },
   {
     number: '02',
-    title: 'Entendemos e desenhamos o caminho',
-    text: 'Avaliamos o contexto e organizamos o que realmente faz sentido construir.',
+    title: 'Definimos e implantamos por etapas',
+    text: 'Organizamos a solução e o primeiro escopo, com implantação progressiva e validações na operação.',
   },
   {
     number: '03',
-    title: 'Construímos e entregamos',
-    text: 'Desenvolvimento próximo, validação e orientação na entrega.',
+    title: 'Valor em uso e continuidade',
+    text: 'Orientamos o uso e verificamos a melhoria na prática. Quando contratada, a Soluverx acompanha a tecnologia conforme o escopo de suporte, manutenção ou evolução acordado.',
   },
 ]
 
@@ -100,7 +100,7 @@ function Process() {
           <p className="process__intro">
             Você não precisa chegar com uma solução pronta. O processo começa
             entendendo o problema e só avança quando existe clareza sobre o que
-            realmente faz sentido construir.
+            realmente faz sentido implantar.
           </p>
         </header>
 
