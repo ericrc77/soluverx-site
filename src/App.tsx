@@ -4,6 +4,7 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home/Home'
 import Privacy from './pages/Privacy/Privacy'
 import RouteFallback from './components/RouteFallback/RouteFallback'
+import WhatsAppFloat from './components/WhatsAppFloat/WhatsAppFloat'
 
 const DevelopmentSoftware = lazy(
   () => import('./pages/DevelopmentSoftware/DevelopmentSoftware'),
@@ -19,6 +20,7 @@ const SystemsIntegration = lazy(
 function App() {
   return (
     <BrowserRouter>
+      <WhatsAppFloat />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/privacidade" element={<Privacy />} />

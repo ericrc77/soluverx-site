@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState, type SyntheticEvent } from 'react'
 import { useForm, ValidationError } from '@formspree/react'
+import { whatsappUrl } from '../../config/contact'
 import { trackEvent } from '../../utils/analytics'
 import './Contact.css'
 
@@ -10,9 +11,6 @@ type FieldErrors = {
   email?: string
   message?: string
 }
-
-const whatsappUrl =
-  'https://wa.me/5533998551827?text=Olá,%20vim%20pelo%20site%20da%20Soluverx%20e%20gostaria%20de%20conversar%20sobre%20uma%20necessidade%20da%20minha%20operação.'
 
 function isValidEmail(value: string) {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
@@ -140,22 +138,37 @@ function Contact() {
           </p>
 
           <div className="contact__channels">
-            <div className="contact__channel">
-              <span className="contact__channel-label">Email</span>
-              <a href="mailto:soluverx@gmail.com">soluverx@gmail.com</a>
-            </div>
+            <a className="contact__channel" href="mailto:soluverx@gmail.com">
+              <span className="contact__channel-icon contact__channel-icon--email" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <rect x="3.5" y="5.5" width="17" height="13" rx="2" />
+                  <path d="m4.5 7 7.5 6 7.5-6" />
+                </svg>
+              </span>
+              <span className="contact__channel-copy">
+                <span className="contact__channel-label">Email</span>
+                <span className="contact__channel-value">soluverx@gmail.com</span>
+              </span>
+            </a>
 
-            <div className="contact__channel">
-              <span className="contact__channel-label">WhatsApp</span>
-              <a
-                href={whatsappUrl}
-                onClick={() => trackEvent('whatsapp_click', { location: 'contact' })}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Falar pelo WhatsApp
-              </a>
-            </div>
+            <a
+              className="contact__channel"
+              href={whatsappUrl}
+              onClick={() => trackEvent('whatsapp_click', { location: 'contact' })}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span className="contact__channel-icon contact__channel-icon--whatsapp" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 3.5a8.5 8.5 0 0 0-7.26 12.92L3.5 20.5l4.25-1.2A8.5 8.5 0 1 0 12 3.5Z" />
+                  <path d="M9.3 8.9c.17-.4.45-.47.7-.47h.57c.18 0 .34.1.43.3l.75 1.68c.1.22.07.4-.06.55l-.5.6c.34.73 1.2 1.62 2.02 1.96l.66-.47c.16-.12.35-.13.53-.05l1.58.73c.2.1.3.25.3.44v.5c0 .42-.28.7-.65.79-.25.06-.53.08-.82.06-2.85-.17-5.47-2.7-5.65-5.52-.02-.3 0-.58.06-.84Z" />
+                </svg>
+              </span>
+              <span className="contact__channel-copy">
+                <span className="contact__channel-label">WhatsApp</span>
+                <span className="contact__channel-value">Falar pelo WhatsApp</span>
+              </span>
+            </a>
           </div>
 
           <div className="contact__mobile-actions">
