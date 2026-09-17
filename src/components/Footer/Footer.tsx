@@ -13,7 +13,7 @@ function Footer() {
         <div className="footer__top">
           <div className="footer__brand">
             <a
-              href={`${homePrefix}#inicio`}
+              href="/"
               className="footer__logo"
               aria-label="Soluverx - Início"
             >
@@ -36,10 +36,19 @@ function Footer() {
             <div className="footer__column">
               <span className="footer__label">Navegação</span>
 
+              <a href="/">Home</a>
               <a href={`${homePrefix}#solucoes`}>Soluções</a>
               <a href={`${homePrefix}#processo`}>Como trabalhamos</a>
               <a href={`${homePrefix}#sobre`}>Sobre</a>
               <a href={`${homePrefix}#faq`}>FAQ</a>
+              <a href={`${homePrefix}#contato`}>Contato</a>
+            </div>
+            <div className="footer__column">
+              <span className="footer__label">Caminhos tecnológicos</span>
+              <a href="/desenvolvimento-de-software">Software sob medida</a>
+              <a href="/dashboards">Dashboards empresariais</a>
+              <a href="/automacao-de-processos">Automação de processos</a>
+              <a href="/integracao-de-sistemas">Integração de sistemas</a>
             </div>
           </div>
         </div>

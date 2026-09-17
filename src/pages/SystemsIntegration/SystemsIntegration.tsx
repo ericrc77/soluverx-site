@@ -28,7 +28,7 @@ function SystemsIntegration() {
   return (
     <>
       <ScrollReveal />
-      <Header solutionsHrefOverride="#possibilidades" processHrefOverride="#processo" faqHrefOverride="#faq" contactHrefOverride="#contato" />
+      <Header />
       <main className="solution-page int-page">
         <section className="int-hero" id="inicio">
           <div className="solution-container int-hero__layout">
@@ -40,13 +40,13 @@ function SystemsIntegration() {
             </div>
             <div className="int-hero__visual" role="img" aria-label="Sistemas comercial, financeiro, estoque e atendimento conectados por uma camada de integração com dados sincronizados">
               <div className="int-network" aria-hidden="true">
-                <div className="int-network__top"><span>Mapa da operação</span><span className="int-network__healthy"><i /> Sincronização ativa</span></div>
+                <div className="int-network__top"><span>Mapa da operação</span><span className="int-network__healthy">Exemplo ilustrativo</span></div>
                 <svg className="int-network__lines" viewBox="0 0 600 390"><defs><linearGradient id="intLine" x1="0" x2="1"><stop stopColor="#3b82f6"/><stop offset=".5" stopColor="#22d3ee"/><stop offset="1" stopColor="#818cf8"/></linearGradient></defs><path d="M145 91 C210 91 215 194 278 194M455 91 C390 91 385 194 322 194M145 300 C210 300 215 210 278 210M455 300 C390 300 385 210 322 210"/><circle className="int-network__packet p1" cx="190" cy="120" r="4"/><circle className="int-network__packet p2" cx="407" cy="120" r="4"/><circle className="int-network__packet p3" cx="190" cy="270" r="4"/><circle className="int-network__packet p4" cx="410" cy="270" r="4"/></svg>
                 <div className="int-system int-system--sales"><span className="int-system__icon">C</span><div><strong>Comercial</strong><small>CRM</small></div><i /></div>
                 <div className="int-system int-system--finance"><span className="int-system__icon">F</span><div><strong>Financeiro</strong><small>ERP</small></div><i /></div>
                 <div className="int-system int-system--stock"><span className="int-system__icon">E</span><div><strong>Estoque</strong><small>Gestão</small></div><i /></div>
                 <div className="int-system int-system--service"><span className="int-system__icon">A</span><div><strong>Atendimento</strong><small>Help desk</small></div><i /></div>
-                <div className="int-hub"><span>Integração</span><strong>Dados processados</strong><div><i /> 48 eventos <small>hoje</small></div></div>
+                <div className="int-hub"><span>Integração</span><strong>Dados e regras</strong><div>Origem → destino</div></div>
                 <div className="int-network__event"><i>✓</i><div><strong>Cliente atualizado</strong><small>CRM → ERP · agora</small></div></div>
               </div>
             </div>
@@ -77,7 +77,7 @@ function SystemsIntegration() {
             <div className="int-architecture__pipeline" data-reveal-stagger>
               <div><span>01 · Origem</span><strong>Sistema envia um evento</strong><small>Pedido aprovado</small></div><i>→</i><div><span>02 · Validação</span><strong>Dados são conferidos</strong><small>Campos e permissões</small></div><i>→</i><div className="is-core"><span>03 · Processamento</span><strong>Regras transformam a informação</strong><small>Formato e correspondências</small></div><i>→</i><div><span>04 · Destino</span><strong>Ação é realizada</strong><small>Cobrança criada</small></div><i>→</i><div><span>05 · Retorno</span><strong>Status fica registrado</strong><small>Concluído ou alertado</small></div>
             </div>
-            <div className="int-architecture__log"><span>14:32:08</span><strong>evento.pedido_aprovado</strong><span>validado</span><span>processado</span><span className="is-success">sincronizado ✓</span></div>
+            <div className="int-architecture__log"><span>Exemplo de registro</span><strong>evento.pedido_aprovado</strong><span>validado</span><span>processado</span><span className="is-success">sincronizado ✓</span></div>
           </div>
         </section>
 
@@ -90,6 +90,13 @@ function SystemsIntegration() {
 
         <section className="solution-section int-approach">
           <div className="solution-container int-approach__layout"><div data-reveal="left"><span className="solution-eyebrow">Abordagem Soluverx</span><h2>Conectar o que funciona antes de propor substituir.</h2></div><div data-reveal="right"><p>Partimos do fluxo operacional, avaliamos as possibilidades reais de cada ferramenta e desenhamos a menor conexão capaz de reduzir o atrito.</p><ul><li>Viabilidade técnica sem perder o benefício de vista</li><li>Segurança e acesso apenas ao necessário</li><li>Implantação gradual quando reduz risco</li><li>Documentação suficiente para manter a conexão compreensível</li></ul></div></div>
+        </section>
+
+        <section className="solution-section solution-lifecycle">
+          <div className="solution-container solution-lifecycle__layout">
+            <div className="solution-heading" data-reveal="left"><span className="solution-eyebrow">Conexão em uso</span><h2>Integrar inclui decidir como a conexão será mantida.</h2><p>APIs, permissões, limites do fornecedor e regras de dados precisam ser viáveis. Se já houver um conector adequado, ele pode ser preferível a construir uma integração própria.</p></div>
+            <div className="solution-lifecycle__content" data-reveal="right"><h3>Implantação progressiva</h3><p>Com escopo e condições acordados, começamos por uma troca relevante. Validamos origem oficial, conflitos, falhas e retorno na operação antes de ampliar.</p><h3>Continuidade quando contratada</h3><p>A Soluverx pode acompanhar falhas e monitoramento, manter autenticação e adaptar a conexão a mudanças nas APIs ou nas regras. Operação, suporte, manutenção e evolução ficam limitados às responsabilidades contratadas.</p></div>
+          </div>
         </section>
 
         <section className="solution-section solution-faq" id="faq"><div className="solution-container solution-faq__layout"><div className="solution-heading" data-reveal="left"><span className="solution-eyebrow">Dúvidas frequentes</span><h2>O que vale entender antes de conectar.</h2></div><div className="solution-faq__list" data-reveal="right" data-exclusive-details>{faqs.map(([q,a])=><details key={q} onToggle={closeOtherDetails}><summary>{q}</summary><p>{a}</p></details>)}</div></div></section>

@@ -53,6 +53,9 @@
 
 .footer__navigation {
   min-width: 190px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 36px;
 }
 
 .footer__column {

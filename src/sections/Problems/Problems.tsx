@@ -236,7 +236,7 @@ function Problems() {
           </div>
 
           <a className="problems__other-link" href="#contato">
-            <span>Conte o que está dando trabalho</span>
+            <span>Conversar sobre essa dificuldade</span>
             <span aria-hidden="true">→</span>
           </a>
         </div>

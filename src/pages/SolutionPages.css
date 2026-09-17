@@ -74,8 +74,7 @@
 
 .solution-button--primary {
   border-color: #22d3ee;
-  background: linear-gradient(135deg, #2563eb, #0891b2);
-  box-shadow: 0 12px 36px rgba(6, 182, 212, .18);
+  background: var(--color-blue);
 }
 
 .solution-button:hover { transform: translateY(-2px); }
@@ -154,6 +153,13 @@
 }
 .solution-related a { color: rgba(165, 243, 252, .76); font-size: .78rem; text-decoration: none; }
 .solution-related a:hover { color: #fff; }
+
+.solution-lifecycle { background: #0b1b31; border-block: 1px solid var(--border-color); }
+.solution-lifecycle__layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px; }
+.solution-lifecycle__content h3 { font-size: 1.15rem; line-height: 1.4; }
+.solution-lifecycle__content p { margin-top: 14px; color: #b6c5d9; line-height: 1.7; }
+.solution-lifecycle__content h3:not(:first-child) { margin-top: 28px; }
+@media (max-width: 900px) { .solution-lifecycle__layout { grid-template-columns: 1fr; gap: 28px; } }
 
 @media (max-width: 900px) {
   .solution-heading--split, .solution-faq__layout { grid-template-columns: 1fr; gap: 28px; }

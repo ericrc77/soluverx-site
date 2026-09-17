@@ -9,7 +9,7 @@ import Problems from '../../sections/Problems/Problems'
 import Inclusion from '../../sections/Inclusion/Inclusion'
 import Solutions from '../../sections/Solutions/Solutions'
 import Process from '../../sections/Process/Process'
-import Differentials from '../../sections/Differentials/Differentials'
+import Continuity from '../../sections/Continuity/Continuity'
 import About from '../../sections/About/About'
 import FAQ from '../../sections/FAQ/FAQ'
 import Contact from '../../sections/Contact/Contact'
@@ -32,7 +32,7 @@ function Home() {
     setMetaContent('meta[property="og:title"]', homeTitle)
     setMetaContent(
       'meta[property="og:image:alt"]',
-      'Soluverx - Software sob medida para necessidades reais',
+      'Soluverx - Tecnologia adequada para problemas reais da operação',
     )
     setMetaContent(
       'meta[property="og:description"]',
@@ -41,7 +41,7 @@ function Home() {
     setMetaContent('meta[name="twitter:title"]', homeTitle)
     setMetaContent(
       'meta[name="twitter:image:alt"]',
-      'Soluverx - Software sob medida para necessidades reais',
+      'Soluverx - Tecnologia adequada para problemas reais da operação',
     )
     setMetaContent(
       'meta[name="twitter:description"]',
@@ -94,7 +94,7 @@ function Home() {
         <Inclusion />
         <Solutions />
         <Process />
-        <Differentials />
+        <Continuity />
         <About />
         <FAQ />
         <Contact />

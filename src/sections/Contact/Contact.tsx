@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState, type SyntheticEvent } from 'react'
 import { useForm, ValidationError } from '@formspree/react'
+import { trackEvent } from '../../utils/analytics'
 import './Contact.css'
 
 type FieldErrors = {
@@ -12,18 +13,6 @@ type FieldErrors = {
 
 const whatsappUrl =
   'https://wa.me/5533998551827?text=Olá,%20vim%20pelo%20site%20da%20Soluverx%20e%20gostaria%20de%20conversar%20sobre%20uma%20necessidade%20da%20minha%20operação.'
-
-function trackFormSuccess() {
-  if (typeof window === 'undefined') {
-    return
-  }
-
-  const globalWindow = window as typeof window & {
-    gtag?: (...args: unknown[]) => void
-  }
-
-  globalWindow.gtag?.('event', 'form_submit_success')
-}
 
 function isValidEmail(value: string) {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
@@ -57,7 +46,7 @@ function Contact() {
 
   useEffect(() => {
     if (state.succeeded && !trackedSuccessRef.current) {
-      trackFormSuccess()
+      trackEvent('form_submit_success')
       trackedSuccessRef.current = true
     }
   }, [state.succeeded])
@@ -141,7 +130,7 @@ function Contact() {
           <span className="contact__eyebrow">Vamos conversar</span>
 
           <h2 className="contact__title">
-            Conte o que está dando trabalho.
+            Vamos entender o que sua operação precisa?
           </h2>
 
           <p className="contact__lead">
@@ -160,6 +149,7 @@ function Contact() {
               <span className="contact__channel-label">WhatsApp</span>
               <a
                 href={whatsappUrl}
+                onClick={() => trackEvent('whatsapp_click', { location: 'contact' })}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -169,14 +159,15 @@ function Contact() {
           </div>
 
           <div className="contact__mobile-actions">
-            <a href={whatsappUrl} target="_blank" rel="noreferrer">
-              Conversar pelo WhatsApp
+            <a href={whatsappUrl} target="_blank" rel="noreferrer" onClick={() => trackEvent('whatsapp_click', { location: 'contact_mobile' })}>
+              Falar pelo WhatsApp
               <span aria-hidden="true">→</span>
             </a>
 
             <button
               type="button"
               aria-expanded={showMobileForm}
+              aria-controls="contact-form-wrap"
               onClick={() => setShowMobileForm((current) => !current)}
             >
               {showMobileForm ? 'Ocultar formulário' : 'Prefiro enviar pelo formulário'}
@@ -185,6 +176,7 @@ function Contact() {
         </div>
 
         <div
+          id="contact-form-wrap"
           className={`contact__form-wrap${showMobileForm ? ' contact__form-wrap--mobile-open' : ''}`}
           data-reveal="right"
           data-reveal-delay="1"

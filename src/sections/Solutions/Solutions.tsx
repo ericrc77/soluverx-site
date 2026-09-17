@@ -185,18 +185,18 @@ function Solutions() {
         <div className="solutions__header" data-reveal="up">
           <div className="solutions__heading">
             <span className="solutions__eyebrow">
-              Soluções que se adaptam ao problema
+              Possíveis caminhos tecnológicos
             </span>
 
             <h2 className="solutions__title">
-              A solução certa depende do que está dando trabalho hoje.
+              A tecnologia assume a forma que o problema pede.
             </h2>
           </div>
 
           <p className="solutions__intro">
-            Avaliamos o que já funciona e o que precisa mudar. Software sob medida,
-            sistemas web, dashboards, automações, integrações, ferramentas internas,
-            MVPs e IA são caminhos possíveis, conforme o problema e a viabilidade.
+            Estes são alguns caminhos possíveis, não uma escolha que você precisa
+            fazer agora. Sistemas web, software sob medida e soluções com IA entram
+            quando a necessidade e a viabilidade justificam.
           </p>
         </div>
 
@@ -306,33 +306,22 @@ function Solutions() {
                 key={solution.id}
                 aria-labelledby={titleId}
               >
-                <button
-                  className="solutions__trigger"
-                  id={buttonId}
-                  type="button"
-                  aria-expanded={isOpen}
-                  aria-controls={panelId}
-                  onClick={() => toggleSolution(solution.id)}
-                >
-                  <span className="solutions__card-top">
+                <h3 id={titleId}>
+                  <button
+                    className="solutions__trigger"
+                    id={buttonId}
+                    type="button"
+                    aria-expanded={isOpen}
+                    aria-controls={panelId}
+                    onClick={() => toggleSolution(solution.id)}
+                  >
                     <span className="solutions__icon">{solution.icon}</span>
-                    <span className="solutions__toggle" aria-hidden="true">
-                      <span />
-                      <span />
-                    </span>
-                  </span>
-
-                  <span className="solutions__card-copy">
-                    <strong id={titleId} role="heading" aria-level={3}>
-                      {solution.title}
-                    </strong>
-                    <span>{solution.description}</span>
-                  </span>
-
-                  <span className="solutions__hint">
-                    {isOpen ? 'Fechar exemplo' : 'Ver quando isso faz sentido'}
-                  </span>
-                </button>
+                    <span>{solution.title}</span>
+                    <span className="solutions__toggle" aria-hidden="true">{isOpen ? '−' : '+'}</span>
+                  </button>
+                </h3>
+                <p className="solutions__description">{solution.description}</p>
+                <span className="solutions__hint">{isOpen ? 'Fechar pelo título' : 'Abra o título para ver um exemplo'}</span>
 
                 <div
                   className="solutions__details"
@@ -379,7 +368,7 @@ function Solutions() {
             <strong>Você não precisa saber qual dessas soluções precisa antes de falar com a gente.</strong>{' '}
             Conte o que está acontecendo e começamos pelo problema.
           </p>
-          <a href="#contato">Conte o que está dando trabalho</a>
+          <a href="#contato">Conversar sobre uma necessidade</a>
         </div>
       </div>
     </section>

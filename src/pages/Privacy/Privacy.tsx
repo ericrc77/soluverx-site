@@ -60,7 +60,7 @@ function Privacy() {
     <div className="privacy-page">
       <header className="privacy-header">
         <div className="privacy-header__container">
-          <a href="/#inicio" className="privacy-header__brand" aria-label="Soluverx - Início">
+          <a href="/" className="privacy-header__brand" aria-label="Soluverx - Início">
             <img
               src={soluverxLogo}
               alt="Soluverx"

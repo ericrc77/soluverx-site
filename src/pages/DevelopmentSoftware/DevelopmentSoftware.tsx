@@ -153,7 +153,7 @@ const decisionPaths = [
     signals: [
       'O processo é comum.',
       'Uma solução existente já atende bem.',
-      'Menor custo e implantação mais rápida.',
+      'Avaliar custo total e adequação à rotina.',
     ],
   },
   {
@@ -187,19 +187,19 @@ const processSteps = [
     number: '02',
     phase: 'Diagnóstico',
     title: 'Identificar o problema principal',
-    text: 'Separar sintomas do que realmente está gerando retrabalho, atraso ou dificuldade.',
+    text: 'Separar sintomas das causas e avaliar viabilidade, ferramentas existentes e benefício esperado.',
   },
   {
     number: '03',
     phase: 'Primeiro escopo',
     title: 'Definir uma primeira solução',
-    text: 'Decidir o que precisa existir agora e o que pode ficar para uma evolução futura.',
+    text: 'Definir a menor entrega útil e o que fica para depois. Escopo, responsabilidades e condições são acordados na proposta antes de iniciar.',
   },
   {
     number: '04',
-    phase: 'Desenvolvimento e validação',
-    title: 'Desenvolver e validar',
-    text: 'Construir com validações ao longo do caminho para reduzir a distância entre a solução e a realidade da operação.',
+    phase: 'Implantação progressiva',
+    title: 'Desenvolver, implantar e validar',
+    text: 'Construir por etapas e colocar o primeiro recorte em uso, com validações de quem participa da operação antes de ampliar.',
   },
   {
     number: '05',
@@ -267,10 +267,7 @@ function DevelopmentSoftware() {
   return (
     <>
       <ScrollReveal />
-      <Header
-        processHrefOverride="#processo"
-        solutionsHrefOverride="#solucoes"
-      />
+      <Header />
 
       <main className="dev-page">
         <section className="dev-hero" id="inicio">
@@ -318,7 +315,7 @@ function DevelopmentSoftware() {
                   </div>
 
                   <span className="dev-operation__tailored">
-                    Módulos definidos conforme a operação
+                    Exemplo ilustrativo · módulos conforme a operação
                   </span>
                 </div>
 
@@ -351,11 +348,11 @@ function DevelopmentSoftware() {
                     <div className="dev-operation__summary">
                       <div className="dev-operation__summary-item">
                         <span>Em andamento</span>
-                        <strong>12 pedidos</strong>
+                        <strong>Fluxo em andamento</strong>
                       </div>
                       <div className="dev-operation__summary-item dev-operation__summary-item--attention">
                         <span>Aguardando decisão</span>
-                        <strong>3 aprovações</strong>
+                        <strong>Revisão necessária</strong>
                       </div>
                     </div>
 
@@ -605,6 +602,13 @@ function DevelopmentSoftware() {
           </div>
         </section>
 
+        <section className="dev-section dev-continuity">
+          <div className="dev-container dev-continuity__layout">
+            <div className="dev-heading" data-reveal="left"><span className="dev-eyebrow">Software na rotina</span><h2>A primeira versão útil é o começo do uso real.</h2><p>Priorizamos um recorte da operação, orientamos o uso e validamos o funcionamento com quem trabalha no processo. Novas funcionalidades dependem das prioridades e do escopo acordado.</p></div>
+            <div className="dev-continuity__content" data-reveal="right"><h3>Continuidade quando contratada</h3><p>A Soluverx pode seguir responsável pela operação tecnológica, suporte, correções, manutenção e evolução do software. Infraestrutura, hospedagem e monitoramento entram quando necessários e previstos na contratação.</p><p>Responsabilidades, limites e condições são definidos para a solução. Essas atividades não são incluídas automaticamente em todo desenvolvimento.</p></div>
+          </div>
+        </section>
+
         <section className="dev-section dev-section--faq" id="faq">
           <div className="dev-container">
             <div className="dev-faq-layout">
@@ -641,14 +645,13 @@ function DevelopmentSoftware() {
               <span className="dev-eyebrow">Vamos começar pelo problema</span>
               <h2>Existe algum processo no seu negócio que deveria funcionar melhor?</h2>
               <p>
-                Você não precisa chegar com uma solução pronta. A primeira
-                conversa serve para entender como a operação funciona, o que está
-                causando dificuldade e avaliar se o melhor caminho é uma ferramenta
-                pronta, uma integração, uma automação ou software sob medida.
+                Conte onde as ferramentas atuais deixaram de acompanhar o
+                processo. Avaliamos o contexto e a viabilidade antes de definir
+                se desenvolver uma solução própria é o caminho adequado.
               </p>
 
               <a className="dev-button dev-button--primary" href="/#contato">
-                Conte o que está acontecendo
+                Conversar sobre este cenário
                 <span aria-hidden="true">→</span>
               </a>
 

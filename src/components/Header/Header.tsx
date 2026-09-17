@@ -2,33 +2,15 @@ import { useEffect, useState } from 'react'
 import soluverxLogo from '../../assets/brand/soluverx-logo-transparent.webp'
 import './Header.css'
 
-type HeaderProps = {
-  processHrefOverride?: string
-  solutionsHrefOverride?: string
-  faqHrefOverride?: string
-  contactHrefOverride?: string
-}
-
-function Header({
-  processHrefOverride,
-  solutionsHrefOverride,
-  faqHrefOverride,
-  contactHrefOverride,
-}: HeaderProps) {
+function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const normalizedPath = window.location.pathname.replace(/\/+$/, '') || '/'
   const isHomePage = normalizedPath === '/'
-  const isDevelopmentSoftwarePage = normalizedPath === '/desenvolvimento-de-software'
   const homePrefix = isHomePage ? '' : '/'
-  const processHref =
-    processHrefOverride ??
-    (isDevelopmentSoftwarePage ? '#processo' : `${homePrefix}#processo`)
-  const solutionsHref = solutionsHrefOverride ?? `${homePrefix}#solucoes`
-  const faqHref =
-    faqHrefOverride ?? (isDevelopmentSoftwarePage ? '#faq' : `${homePrefix}#faq`)
-  const contactHref =
-    contactHrefOverride ??
-    (isDevelopmentSoftwarePage ? '#contato' : `${homePrefix}#contato`)
+  const processHref = `${homePrefix}#processo`
+  const solutionsHref = `${homePrefix}#solucoes`
+  const faqHref = `${homePrefix}#faq`
+  const contactHref = `${homePrefix}#contato`
 
   function closeMenu() {
     setIsMenuOpen(false)
@@ -38,6 +20,7 @@ function Header({
     function handleEscape(event: KeyboardEvent) {
       if (event.key === 'Escape') {
         closeMenu()
+        document.querySelector<HTMLButtonElement>('.header__menu-button')?.focus()
       }
     }
 
@@ -59,7 +42,7 @@ function Header({
       <header className="header">
         <div className="header__container">
           <a
-            href={`${homePrefix}#inicio`}
+            href="/"
             className="header__logo"
             onClick={closeMenu}
             aria-label="Soluverx - Início"
@@ -102,12 +85,12 @@ function Header({
               className="header__mobile-cta"
               onClick={closeMenu}
             >
-              Conte seu problema
+              Conversar sobre uma necessidade
             </a>
           </nav>
 
           <a href={contactHref} className="header__cta">
-            Conte seu problema
+            Conversar sobre uma necessidade
           </a>
 
           <button

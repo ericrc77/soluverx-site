@@ -8,9 +8,9 @@ import '../SolutionPages.css'
 import './Dashboards.css'
 
 const indicators = [
-  ['Pedidos no prazo', '94%', '+3,2 p.p.'],
-  ['Receita realizada', 'R$ 428 mil', '87% da meta'],
-  ['Tempo médio', '2h 18min', '−21 min'],
+  ['Pedidos no prazo', 'Prazo', 'Atrasos e exceções'],
+  ['Receita realizada', 'Receita', 'Meta e realizado'],
+  ['Tempo médio', 'Tempo', 'Espera por etapa'],
 ]
 
 const capabilities = [
@@ -34,7 +34,7 @@ function Dashboards() {
   return (
     <>
       <ScrollReveal />
-      <Header solutionsHrefOverride="#solucoes" processHrefOverride="#processo" faqHrefOverride="#faq" contactHrefOverride="#contato" />
+      <Header />
       <main className="solution-page db-page">
         <section className="db-hero" id="inicio">
           <div className="solution-container db-hero__layout">
@@ -43,16 +43,16 @@ function Dashboards() {
               <h1>Dados organizados para enxergar o que o negócio pede agora.</h1>
               <p>Um dashboard útil não começa pelos gráficos. Começa pelas perguntas da operação e transforma dados dispersos em uma visão que ajuda a acompanhar, comparar e decidir.</p>
               <div className="solution-hero__actions">
-                <a className="solution-button solution-button--primary" href="/#contato">Organize a visão da sua operação <span aria-hidden="true">→</span></a>
+                <a className="solution-button solution-button--primary" href="/#contato">Conversar sobre essa necessidade <span aria-hidden="true">→</span></a>
                 <a className="solution-button solution-button--secondary" href="#visao-util">Veja o que torna a visão útil</a>
               </div>
             </div>
 
-            <div className="db-hero__visual" role="img" aria-label="Dashboard operacional de pedidos com indicadores, meta mensal, tendência por semana e alertas de atenção">
+            <div className="db-hero__visual" role="img" aria-label="Exemplo ilustrativo de dashboard, sem dados de clientes, com indicadores, referências e alertas">
               <div className="db-board" aria-hidden="true">
                 <div className="db-board__bar">
                   <div><span className="db-board__mark">SX</span><strong>Operação comercial</strong></div>
-                  <span className="db-board__updated"><i /> Atualizado agora</span>
+                  <span className="db-board__updated">Exemplo ilustrativo</span>
                 </div>
                 <div className="db-board__filters"><span>Últimos 30 dias</span><span>Todas as unidades</span><span>Todos os canais</span></div>
                 <div className="db-board__metrics">
@@ -60,7 +60,7 @@ function Dashboards() {
                 </div>
                 <div className="db-board__main">
                   <div className="db-chart">
-                    <div className="db-chart__head"><div><span>Pedidos concluídos</span><strong>Evolução semanal</strong></div><small>Meta: 520</small></div>
+                    <div className="db-chart__head"><div><span>Pedidos concluídos</span><strong>Leitura por período</strong></div><small>Referência definida</small></div>
                     <svg viewBox="0 0 440 166" preserveAspectRatio="none">
                       <defs><linearGradient id="dbArea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#22d3ee" stopOpacity=".28"/><stop offset="1" stopColor="#22d3ee" stopOpacity="0"/></linearGradient></defs>
                       <g className="db-chart__grid"><path d="M0 25H440M0 72H440M0 119H440"/></g>
@@ -72,9 +72,9 @@ function Dashboards() {
                   </div>
                   <div className="db-side">
                     <span className="db-side__label">Atenção hoje</span>
-                    <div className="db-alert"><i>!</i><div><strong>7 pedidos em risco</strong><small>Prazo nas próximas 24h</small></div></div>
-                    <div className="db-goal"><div><span>Meta mensal</span><strong>87%</strong></div><span className="db-goal__track"><i /></span><small>R$ 428 mil de R$ 490 mil</small></div>
-                    <div className="db-channel"><span>Canal em destaque</span><strong>Indicações</strong><small>34% de conversão</small></div>
+                    <div className="db-alert"><i>!</i><div><strong>Pedidos em atenção</strong><small>Exceções de prazo</small></div></div>
+                    <div className="db-goal"><div><span>Meta mensal</span><strong>Contexto</strong></div><small>Comparar o realizado com a meta</small></div>
+                    <div className="db-channel"><span>Leitura por canal</span><strong>Comparação</strong><small>Investigar diferenças</small></div>
                   </div>
                 </div>
               </div>
@@ -112,9 +112,9 @@ function Dashboards() {
             <ol className="db-process__line" data-reveal-stagger>
               <li><span>01</span><div><strong>Perguntas</strong><p>O que precisa ser acompanhado ou decidido?</p></div></li>
               <li><span>02</span><div><strong>Indicadores</strong><p>Quais medidas explicam esse cenário?</p></div></li>
-              <li><span>03</span><div><strong>Fontes</strong><p>Onde estão os dados e com que qualidade?</p></div></li>
-              <li><span>04</span><div><strong>Visão</strong><p>Como organizar contexto, detalhe e exceções?</p></div></li>
-              <li><span>05</span><div><strong>Uso</strong><p>Como a leitura entra na rotina da equipe?</p></div></li>
+              <li><span>03</span><div><strong>Fontes</strong><p>Acesso viável, qualidade e regras de cálculo.</p></div></li>
+              <li><span>04</span><div><strong>Primeiro recorte</strong><p>Escopo e condições acordados antes da implantação.</p></div></li>
+              <li><span>05</span><div><strong>Implantação e uso</strong><p>Validar a leitura na rotina antes de ampliar.</p></div></li>
             </ol>
           </div>
         </section>
@@ -136,6 +136,13 @@ function Dashboards() {
           <div className="solution-container db-approach__layout">
             <div><span className="solution-eyebrow">Abordagem Soluverx</span><h2>Clareza primeiro. Tecnologia na medida.</h2></div>
             <p>Podemos construir um dashboard novo, conectar ferramentas que já existem ou recomendar uma alternativa mais simples. A solução adequada é a menor que entrega uma visão confiável para a rotina real.</p>
+          </div>
+        </section>
+
+        <section className="solution-section solution-lifecycle">
+          <div className="solution-container solution-lifecycle__layout">
+            <div className="solution-heading" data-reveal="left"><span className="solution-eyebrow">Da primeira visão à rotina</span><h2>Uma leitura útil precisa acompanhar os dados que mudam.</h2><p>Começamos por perguntas e fontes viáveis. Se o problema estiver na qualidade ou na disponibilidade dos dados, pode ser melhor organizar a origem ou aproveitar relatórios existentes antes de criar um painel.</p></div>
+            <div className="solution-lifecycle__content" data-reveal="right"><h3>Primeira entrega útil</h3><p>Definimos um recorte, as regras e as condições da proposta. Implantamos progressivamente e validamos indicadores, atualização e leitura com quem usa.</p><h3>Continuidade quando contratada</h3><p>A Soluverx pode acompanhar mudanças nas fontes, qualidade dos dados, indicadores e ajustes da visão. Suporte, manutenção e operação tecnológica seguem as responsabilidades contratadas.</p></div>
           </div>
         </section>
 

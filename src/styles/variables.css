@@ -18,6 +18,8 @@
   /* Layout */
   --container-width: 1280px;
   --container-padding: 24px;
+  --section-space: clamp(64px, 7vw, 100px);
+  --section-title-size: clamp(2rem, 4vw, 3.4rem);
 
   /* Bordas */
   --border-color: rgba(148, 163, 184, 0.15);

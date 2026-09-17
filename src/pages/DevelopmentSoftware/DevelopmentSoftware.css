@@ -2248,3 +2248,8 @@
     transition: none;
   }
 }
+.dev-continuity { background: #0b1b31; border-block: 1px solid var(--border-color); }
+.dev-continuity__layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px; }
+.dev-continuity__content h3 { font-size: 1.15rem; line-height: 1.4; }
+.dev-continuity__content p { margin-top: 16px; color: #b6c5d9; line-height: 1.7; }
+@media (max-width: 900px) { .dev-continuity__layout { grid-template-columns: 1fr; gap: 28px; } }

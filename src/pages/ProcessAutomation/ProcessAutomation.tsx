@@ -36,7 +36,7 @@ function ProcessAutomation() {
   return (
     <>
       <ScrollReveal />
-      <Header solutionsHrefOverride="#possibilidades" processHrefOverride="#processo" faqHrefOverride="#faq" contactHrefOverride="#contato" />
+      <Header />
       <main className="solution-page auto-page">
         <section className="auto-hero" id="inicio">
           <div className="solution-container auto-hero__layout">
@@ -48,11 +48,11 @@ function ProcessAutomation() {
             </div>
             <div className="auto-hero__visual" role="img" aria-label="Fluxo automatizado de um pedido, passando por validação, aprovação humana, atualização de sistemas e notificação da equipe">
               <div className="auto-run" aria-hidden="true">
-                <div className="auto-run__head"><div><span className="auto-run__icon">↯</span><div><strong>Fluxo de novo pedido</strong><small>Execução #1842</small></div></div><span className="auto-run__status"><i /> Em andamento</span></div>
+                <div className="auto-run__head"><div><span className="auto-run__icon">↯</span><div><strong>Fluxo de novo pedido</strong><small>Exemplo ilustrativo</small></div></div><span className="auto-run__status">Aprovação humana</span></div>
                 <div className="auto-run__body">
                   {processNodes.map(([type, title, note], index) => <div className={`auto-node auto-node--${index + 1}`} key={title}><span className="auto-node__step">0{index + 1}</span><span className="auto-node__type">{type}</span><div><strong>{title}</strong><small>{note}</small></div><span className="auto-node__state">{index < 2 ? '✓' : index === 2 ? '•••' : ''}</span>{index < processNodes.length - 1 && <i className="auto-node__line" />}</div>)}
                 </div>
-                <div className="auto-run__foot"><span><i /> 2 etapas concluídas</span><span>Próxima ação: aprovação comercial</span></div>
+                <div className="auto-run__foot"><span><i /> Fluxo em acompanhamento</span><span>Próxima ação: aprovação comercial</span></div>
               </div>
             </div>
           </div>
@@ -98,7 +98,14 @@ function ProcessAutomation() {
         <section className="solution-section auto-approach">
           <div className="solution-container">
             <div className="auto-approach__header"><span className="solution-eyebrow">Abordagem Soluverx</span><h2>Antes de acelerar, simplificar.</h2></div>
-            <ol className="auto-approach__steps" data-reveal-stagger><li><span>01</span><strong>Entender a rotina atual</strong><p>Participantes, entradas, regras, exceções e resultados.</p></li><li><span>02</span><strong>Retirar etapas desnecessárias</strong><p>Automatizar um processo ruim apenas o torna ruim mais rápido.</p></li><li><span>03</span><strong>Começar pelo fluxo adequado</strong><p>A menor automação que gere um ganho real e possa evoluir.</p></li><li><span>04</span><strong>Acompanhar em uso</strong><p>Validar execuções, falhas e impacto na rotina.</p></li></ol>
+            <ol className="auto-approach__steps" data-reveal-stagger><li><span>01</span><strong>Entender a rotina atual</strong><p>Participantes, entradas, regras, exceções e resultados.</p></li><li><span>02</span><strong>Simplificar e avaliar</strong><p>Retirar etapas desnecessárias e verificar a viabilidade nas ferramentas existentes.</p></li><li><span>03</span><strong>Definir o primeiro fluxo</strong><p>Escopo, responsabilidades e condições acordados antes de implantar.</p></li><li><span>04</span><strong>Implantar e validar em uso</strong><p>Liberar por etapas e verificar execuções, exceções e impacto na rotina.</p></li></ol>
+          </div>
+        </section>
+
+        <section className="solution-section solution-lifecycle">
+          <div className="solution-container solution-lifecycle__layout">
+            <div className="solution-heading" data-reveal="left"><span className="solution-eyebrow">Depois de ativar o fluxo</span><h2>As regras da operação podem mudar. O fluxo precisa ser cuidado.</h2><p>A primeira entrega valida um processo delimitado, com registros e intervenção humana onde necessário. Ampliar a automação depende do aprendizado no uso e do escopo acordado.</p></div>
+            <div className="solution-lifecycle__content" data-reveal="right"><h3>Continuidade quando contratada</h3><p>A Soluverx pode acompanhar execuções, tratar falhas e manter o fluxo diante de mudanças de regra ou ferramenta. Monitoramento, suporte, correções e evolução entram conforme a solução e a contratação.</p><h3>Limites claros</h3><p>Alertas e registros ajudam a perceber exceções; não substituem a definição de quem intervém e de quais atividades serão acompanhadas após a implantação.</p></div>
           </div>
         </section>
 
